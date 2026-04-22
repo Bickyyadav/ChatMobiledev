@@ -15,7 +15,7 @@ export const getMe = async (req: AuthRequest, res: Response, next: NextFunction)
     } catch (error) {
         // res.status(500).json({ message: "Internal Server Error" });
         res.status(500)
-        next()
+        next(error)
     }
 }
 
