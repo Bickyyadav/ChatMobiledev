@@ -94,7 +94,7 @@ export const initializeSocket = (httpServer: HttpServer) => {
 
 
         // handle typing event
-        socket.on("typing", (data: { chatId: string; isTyping: boolean }) => {
+        socket.on("typing", async (data: { chatId: string; isTyping: boolean }) => {
             const typingPayload = {
                 userId,
                 chatId: data.chatId,
